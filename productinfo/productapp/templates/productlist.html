@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+        Product-List
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>Products Lists</h1>
+        {% for i in products %}
+        <li>
+            <ol>Name- {{i.pname}}</ol>
+            <br>
+            <ol>Description-{{i.pdescription}}</ol>
+        </li>
+        {% endfor %}
+        <table class="table">
+            <thead>
+              <tr>
+                
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for i in products %}
+              <tr>
+                
+                <td>{{i.pname}}</td>
+                <td>{{i.pdescription}}</td>
+              </tr>
+              
+              {% endfor %}
+            </tbody>
+          </table>
+    </body>
+</html>
